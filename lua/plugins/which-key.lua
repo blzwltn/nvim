@@ -48,10 +48,10 @@ return {              -- Useful plugin to show you pending keybinds.
     spec = {
       { "<leader>e", group = "Explore" },
       { "<leader>f", group = "Files" },
-      { "<leader>h", group = "Harpoon" },
       { "<leader>l", group = "Code" },
+      { "<leader>o", group = "oil" },
+
       { "<leader>S", group = "Split" },
-      { "<leader>s", group = "Surround" },
       { "<leader>t", group = "Terminal" },
       { "<leader>w", group = "Write" },
     },

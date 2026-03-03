@@ -35,4 +35,7 @@ return {
       })
     end,
   },
+  vim.keymap.set("n", "<leader>el", "<CMD>Neotree filesystem reveal left toggle<CR>", { desc = "file tree on left" }),
+  vim.keymap.set("n", "<leader>eb", "<CMD>Neotree buffers focus float toggle<CR>", { desc = "buffers" }),
+  vim.keymap.set("n", "<leader>eg", "<CMD>Neotree git_status focus float toggle<CR>", { desc = "git status" }),
 }

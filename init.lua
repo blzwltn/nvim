@@ -11,6 +11,7 @@ vim.o.clipboard = "unnamedplus"
 vim.o.colorcolumn = "120"
 vim.o.confirm = true
 vim.o.cursorline = true
+vim.o.completeopt = 'menuone,noinsert,noselect,fuzzy,nosort'
 
 vim.o.expandtab = true
 
@@ -41,16 +42,18 @@ vim.o.undofile = true
 vim.o.updatetime = 250
 
 vim.o.wrap = false
+vim.o.winborder = 'bold'
 
 vim.opt.cmdheight = 0
 vim.opt.listchars = { tab = "| ", trail = "·", nbsp = "␣" }
-vim.opt.termguicolors = true
 
-vim.cmd("colorscheme murphy")
+vim.o.termguicolors = true
+vim.g.tinted_colorspace = 256
 
 require("keymaps")
 require("lazy_bootstrap")
 require("lazy").setup({
   { import = "plugins" },
   { import = "plugins.lsp" },
+  { import = "themes" },
 })

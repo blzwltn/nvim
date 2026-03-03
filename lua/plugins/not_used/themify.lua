@@ -7,7 +7,6 @@ return {
     require('themify').setup({
       "default",
       "sderev/alabaster.vim",
-      "RRethy/base16-nvim",
       'funnyVariable/blank.nvim',
       'projekt0n/github-nvim-theme',
       "ellisonleao/gruvbox.nvim",
@@ -20,6 +19,7 @@ return {
       "fxn/vim-monochrome",
       "Mofiqul/vscode.nvim",
       "zenbones-theme/zenbones.nvim",
+      "tinted-theming/tinted-vim",
     })
   end
 }

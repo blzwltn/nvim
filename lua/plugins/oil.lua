@@ -1,9 +1,14 @@
 return {
   "stevearc/oil.nvim",
-  opts = {},
-  -- Optional dependencies
-  dependencies = { { "echasnovski/mini.icons", opts = {} } },
-  -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
-  -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+  opts = {
+    columns = { "permissions", "size", "mtime", "icon" },
+    skip_confirm_for_simple_edits = false,
+    view_options = { show_hidden = true }
+  },
+  dependencies = { "nvim-mini/mini.icons", opts = { style = 'ascii' } },
   lazy = false,
+
+  vim.keymap.set("n", "<leader>oo", "<CMD>Oil<CR>", { desc = "Parent Dir" }),
+  vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Parent Dir" }),
+  vim.keymap.set("n", "<leader>of", "<CMD>Oil --float<CR>", { desc = "Floating Window" })
 }
